@@ -1,0 +1,68 @@
+<div class="nilu">
+    <h2 style="color: wheat;"> Register </h2>
+    <div class="container row center " id="boxid">
+
+        <div class="row ">
+            <form class='box' (submit)="addProduct()">
+
+                <div class=" col s12 m4 input-field">
+
+                    <input type="text" placeholder="Name" [(ngModel)]="name" name="name" required />
+                </div>
+                <div class="col m4 input-field">
+                    <input type="text" placeholder="Email" [(ngModel)]="email" name="email" required />
+                </div>
+                <div class="col m4 input-field">
+                    <input type="text" placeholder="Contact" [(ngModel)]="contact" name="contact" required />
+                </div>
+                <div class="row center ">
+                    <ng-container *ngIf="op; then add; else update"></ng-container>
+
+                    <!-- <input type="submit" class="btn" value=" + " /> -->
+                </div>
+            </form>
+        </div>
+        <hr />
+
+
+
+
+        <div class="container" id="results">
+            <div class="row">
+
+                <table>
+
+                    <th> Name</th>
+                    <th> Email</th>
+                    <th> Contact</th>
+                    <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit
+                    </th>
+                    <th> Delete</th>
+                    <tr *ngFor='let product of prod' class="rrrr">
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.email }}</td>
+                        <td>{{ product.contact }}</td>
+
+                        <td>
+                            <input type="button" (click)="editProduct(product)" value=" Edit "
+                                class="waves-effect waves-light btn right green" />
+                        </td>
+                        <td>
+                            <input type="button" (click)="deleteProduct(product)" value=" X "
+                                class="waves-effect waves-light btn right red" />
+                        </td>
+
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <ng-template #add>
+            <input type="submit" class="btn" value=" Add" />
+        </ng-template>
+
+        <ng-template #update>
+            <input type="submit" value="Update" (click)="updateProduct()" />
+        </ng-template>
+    </div>

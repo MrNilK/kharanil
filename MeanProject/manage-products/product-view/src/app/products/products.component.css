@@ -1,0 +1,104 @@
+body{
+    margin : 0;
+    padding: 0;
+    font-family :sans-serif;
+    background :red;
+    background-color: transparent;
+    background: transparent;
+    border:darkgoldenrod
+}
+#boxid{
+  background :slateblue;
+  background-image: url('https://ak.picdn.net/shutterstock/videos/4756988/thumb/1.jpg') ;
+width: 1300px;
+}
+
+
+.nilu{
+    width:1500px;
+    height: max-content;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:  #191919;
+    text-align: center;
+     border-radius: 50px;
+     opacity: 1.2;
+}
+.box {
+     margin: 20px auto;
+      
+    
+
+}
+
+
+.nilu input[type = 'text'], .box input[type = 'text']{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color:white;
+    border-radius: 29px;
+
+    transition: 0.50s; 
+}
+.nilu input[type = 'text']:focus, .box input[type = 'text']:focus{
+    width: 280px;
+    border-color: #2ecc71;
+    background-color:midnightblue;
+
+}
+
+.nilu input[type = 'submit']{
+
+      border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #2ecc71;
+    padding: 1px 17px;
+    width: 200px;
+    outline: none;
+    color:whi;
+    border-radius: 24px;
+    transition: 0.25s; 
+    cursor: pointer;
+}
+
+.nilu input[type = 'submit']:hover{
+    background: #2ecc71;
+     transform-origin: center bottom;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  
+}
+
+.nilu input[type = 'button']:hover{
+     
+    border-radius: 18px;
+     -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  
+}
+  
+#results{
+   
+    background:transparent;
+     color: white;
+}
+.rrrr:hover{
+  
+    color: yellow;
+    
+
+}
